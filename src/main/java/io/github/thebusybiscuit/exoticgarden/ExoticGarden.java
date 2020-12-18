@@ -203,7 +203,7 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		registerMagicalPlant("Obsidian", "黑曜石", new ItemStack(Material.OBSIDIAN, 2), "7840b87d52271d2a755dedc82877e0ed3df67dcc42ea479ec146176b02779a5",
 		new ItemStack[] {null, new ItemStack(Material.OBSIDIAN), null, new ItemStack(Material.OBSIDIAN), getItem("LAPIS_PLANT"), new ItemStack(Material.OBSIDIAN), null, new ItemStack(Material.OBSIDIAN), null});
 
-		registerMagicalPlant("Slime", "粘液", new ItemStack(Material.SLIME_BALL, 8), "90e65e6e5113a5187dad46dfad3d3bf85e8ef807f82aac228a59c4a95d6f6a",
+		registerMagicalPlant("Slime", "黏液", new ItemStack(Material.SLIME_BALL, 8), "90e65e6e5113a5187dad46dfad3d3bf85e8ef807f82aac228a59c4a95d6f6a",
 		new ItemStack[] {null, new ItemStack(Material.SLIME_BALL), null, new ItemStack(Material.SLIME_BALL), getItem("ENDER_PLANT"), new ItemStack(Material.SLIME_BALL), null, new ItemStack(Material.SLIME_BALL), null});
 
 		new Crook(miscCategory, new SlimefunItemStack("CROOK", new CustomItem(Material.WOODEN_HOE, "&rCrook", "", "&7+&b25% &7樹苗掉落機率")), RecipeType.ENHANCED_CRAFTING_TABLE,
@@ -247,7 +247,7 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		Tree tree = new Tree(id, texture, soil);
 		trees.add(tree);
 
-		SlimefunItemStack sapling = new SlimefunItemStack(id + "_SAPLING", Material.OAK_SAPLING, color + name + " Sapling");
+		SlimefunItemStack sapling = new SlimefunItemStack(id + "_SAPLING", Material.OAK_SAPLING, color + displayname + "樹苗");
 
 		items.put(id + "_SAPLING", sapling);
 
@@ -255,7 +255,7 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		new ItemStack[] {null, null, null, null, new ItemStack(Material.GRASS), null, null, null, null})
 		.register(this);
 
-		new ExoticGardenFruit(mainCategory, new SlimefunItemStack(id, texture, color + name), ExoticGardenRecipeTypes.HARVEST_TREE, true,
+		new ExoticGardenFruit(mainCategory, new SlimefunItemStack(id, texture, color + displayname), ExoticGardenRecipeTypes.HARVEST_TREE, true,
 		new ItemStack[] {null, null, null, null, getItem(id + "_SAPLING"), null, null, null, null})
 		.register(this);
 
@@ -297,7 +297,7 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		Berry berry = new Berry(upperCase, type, texture);
 		berries.add(berry);
 
-		SlimefunItemStack sfi = new SlimefunItemStack(upperCase + "_BUSH", Material.OAK_SAPLING, color + name + "果苗");
+		SlimefunItemStack sfi = new SlimefunItemStack(upperCase + "_BUSH", Material.OAK_SAPLING, color + displayname + "果苗");
 
 		items.put(upperCase + "_BUSH", sfi);
 
@@ -305,7 +305,7 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		new ItemStack[] {null, null, null, null, new ItemStack(Material.GRASS), null, null, null, null})
 		.register(this);
 
-		new ExoticGardenFruit(mainCategory, new SlimefunItemStack(upperCase, texture, color + name), ExoticGardenRecipeTypes.HARVEST_BUSH, true,
+		new ExoticGardenFruit(mainCategory, new SlimefunItemStack(upperCase, texture, color + displayname), ExoticGardenRecipeTypes.HARVEST_BUSH, true,
 		new ItemStack[] {null, null, null, null, getItem(upperCase + "_BUSH"), null, null, null, null})
 		.register(this);
 
@@ -341,14 +341,14 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		Berry berry = new Berry(enumStyle, type, texture);
 		berries.add(berry);
 
-		SlimefunItemStack bush = new SlimefunItemStack(enumStyle + "_BUSH", Material.OAK_SAPLING, color + name + "樹苗");
+		SlimefunItemStack bush = new SlimefunItemStack(enumStyle + "_BUSH", Material.OAK_SAPLING, color + displayname + "樹苗");
 		items.put(upperCase + "_BUSH", bush);
 
 		new SlimefunItem(mainCategory, bush, ExoticGardenRecipeTypes.BREAKING_GRASS,
 		new ItemStack[] {null, null, null, null, new ItemStack(Material.GRASS), null, null, null, null})
 		.register(this);
 
-		new ExoticGardenFruit(mainCategory, new SlimefunItemStack(enumStyle, texture, color + name), ExoticGardenRecipeTypes.HARVEST_BUSH, true,
+		new ExoticGardenFruit(mainCategory, new SlimefunItemStack(enumStyle, texture, color + displayname), ExoticGardenRecipeTypes.HARVEST_BUSH, true,
 		new ItemStack[] {null, null, null, null, getItem(enumStyle + "_BUSH"), null, null, null, null})
 		.register(this);
 	}
@@ -362,7 +362,7 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 		Berry berry = new Berry(essence, upperCase + "_ESSENCE", PlantType.ORE_PLANT, texture);
 		berries.add(berry);
 
-		new SlimefunItem(magicalCategory, new SlimefunItemStack(enumStyle + "_PLANT", Material.OAK_SAPLING, "&r" + name + "樹苗"), RecipeType.ENHANCED_CRAFTING_TABLE,
+		new SlimefunItem(magicalCategory, new SlimefunItemStack(enumStyle + "_PLANT", Material.OAK_SAPLING, "&r" + displayname + "樹苗"), RecipeType.ENHANCED_CRAFTING_TABLE,
 		recipe)
 		.register(this);
 
