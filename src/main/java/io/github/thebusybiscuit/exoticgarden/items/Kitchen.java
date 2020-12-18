@@ -30,7 +30,7 @@ public class Kitchen extends MultiBlockMachine {
     private final ExoticGarden plugin;
 
     public Kitchen(ExoticGarden plugin, Category category) {
-        super(category, new SlimefunItemStack("KITCHEN", Material.CAULDRON, "&eKitchen", "", "&a&oYou can make a bunch of different yummies here!", "&a&oThe result goes in the Furnace output slot"), new ItemStack[] { new CustomItem(Material.BRICK_STAIRS, "&oBrick Stairs (upside down)"), new CustomItem(Material.BRICK_STAIRS, "&oBrick Stairs (upside down)"), new ItemStack(Material.BRICKS), new ItemStack(Material.STONE_PRESSURE_PLATE), new ItemStack(Material.IRON_TRAPDOOR), new ItemStack(Material.BOOKSHELF), new ItemStack(Material.FURNACE), new ItemStack(Material.DISPENSER), new ItemStack(Material.CRAFTING_TABLE) }, new ItemStack[0], BlockFace.SELF);
+        super(category, new SlimefunItemStack("KITCHEN", Material.CAULDRON, "&e廚房", "", "&a&o您可以在這裡製作一堆不同的美味佳餚!", "&a&o結果進入溶爐輸出槽"), new ItemStack[] { new CustomItem(Material.BRICK_STAIRS, "&o磚樓梯 (面向下)"), new CustomItem(Material.BRICK_STAIRS, "&o磚樓梯 (面向下)"), new ItemStack(Material.BRICKS), new ItemStack(Material.STONE_PRESSURE_PLATE), new ItemStack(Material.IRON_TRAPDOOR), new ItemStack(Material.BOOKSHELF), new ItemStack(Material.FURNACE), new ItemStack(Material.DISPENSER), new ItemStack(Material.CRAFTING_TABLE) }, new ItemStack[0], BlockFace.SELF);
 
         this.plugin = plugin;
     }
